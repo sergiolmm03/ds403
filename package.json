@@ -1,4 +1,11 @@
 {
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "fs": "^0.0.1-security",
+    "pg": "^8.7.3",
+    "socket.io": "^4.5.1"
+  },
   "name": "ds403",
   "version": "1.0.0",
   "description": "flutter",
@@ -17,12 +24,6 @@
   "bugs": {
     "url": "https://github.com/sergiolmm03/ds403/issues"
   },
-  "homepage": "https://github.com/sergiolmm03/ds403#readme",
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.18.1",
-    "fs": "^0.0.1-security",
-    "pg": "^8.7.3",
-    "socket.io": "^4.5.1"
-  }
+  "homepage": "https://github.com/sergiolmm03/ds403#readme"
+  
 }
