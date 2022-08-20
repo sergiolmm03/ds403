@@ -13,8 +13,8 @@ app.use(express.static(path.join(__dirname, 'www')));
 
 app.get('/', function (req,res) {
 
-    //res.sendFile('/index.html');
-
+    res.sendFile('/index.html');
+/*
     fs.readFile( '/index.html','utf-8', function (err,data) {
         if (err){
             res.writeHead(500);
@@ -24,7 +24,7 @@ app.get('/', function (req,res) {
         var result = data;
         res.end(result);
     });
-  
+  */
     
 });
 
