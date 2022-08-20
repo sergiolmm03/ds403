@@ -1,0 +1,29 @@
+#text1 {
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    font-size: 14px;
+    border: 2px solid blue;
+    text-transform: none;
+    overflow: auto;
+    text-align: left;
+    margin-top: 4px;
+    margin: 6px;
+    width: 97vw;
+    height: 30vh;
+}
+
+#text2 {
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    font-size: 14px;
+    border: 2px solid green;
+    text-transform: none;
+    overflow: auto;
+    text-align: left;
+    margin-top: 4px;
+    margin: 6px;
+    width: 97vw;
+    height: 30vh;
+}
+input {
+    width:200px;
+    height:20px;
+ }
