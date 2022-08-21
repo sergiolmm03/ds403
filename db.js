@@ -3,7 +3,7 @@ const { Pool} = require('pg')
 try{
   const cs = require("./../connect_string.js");
 }
-catch(){
+catch( e ){
   cs = null;
 }  
 
