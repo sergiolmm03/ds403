@@ -1,4 +1,8 @@
+// verificando o log heroku
+// heroku instalado no computador.
+// heroku  logs --app=ds403 --tail
 const path = require('path');
+const db = require("./db");
 
 var express = require('express'),
     app     = express(),
@@ -8,8 +12,23 @@ var express = require('express'),
 
 const fs = require('fs');
 
+
+
 app.use(express.static(path.join(__dirname, 'www')));
 
+
+app.get('/1', function (req,res) {
+    (async () => {
+        const client = await db.connect();
+        console.log('Começou!');
+        const clientes = await db.selectData(res,client);
+        // release connection
+        client.release();
+        console.log(clientes);   
+        })();
+      console.log("passou");   
+//    res.end('alo');    
+});
 
 app.get('/', function (req,res) {
     
