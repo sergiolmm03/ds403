@@ -1,6 +1,11 @@
 const { Pool} = require('pg')
 
-const cs = require("./../connect_string.js");
+try{
+  const cs = require("./../connect_string.js");
+}
+catch(){
+  cs = null;
+}  
 
 const pool = new Pool({
   // quando local usar a url fornecida pelo heroku
