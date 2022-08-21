@@ -1,16 +1,18 @@
 const { Pool} = require('pg')
-
+stringConn = "";
+// faz isso para nao subir no git dados importantes da conexão e outros
 try{
   const cs = require("./../connect_string.js");
+  stringConn = cs.connectionString();
 }
 catch( e ){
-  cs = null;
+  stringConn = null;
 }  
 
 const pool = new Pool({
   // quando local usar a url fornecida pelo heroku
   // ao subir e testar no heroku usar o colocado no heroku
-  connectionString: process.env.DATABASE_URL || cs.connectionString(),   
+  connectionString: process.env.DATABASE_URL || stringConn,   
   ssl: {
         rejectUnauthorized: false
   }
